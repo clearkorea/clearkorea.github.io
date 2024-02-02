@@ -1,0 +1,46 @@
+app_netlify_com__jit_plugin.deployToNetlify({
+  files: [
+    {
+      path: "index.html",
+      content: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Council Meeting Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4">
+        <header class="text-center my-6">
+            <h1 class="text-4xl font-bold">January 2024 Church Council Meeting Agenda</h1>
+        </header>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">Opening Prayer</h2>
+            <p>Prayer for Christian Unity</p>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">Message from the Priest</h2>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">Magok Sumyeong Cathedral Café Introduction</h2>
+            <p>Promotion Committee</p>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">2023 Financial Report</h2>
+            <p>Finance Committee</p>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">2024 Pastoral Plan Progress</h2>
+            <p>Secretary</p>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-2xl font-semibold">Closing Prayer</h2>
+            <p>Gloria</p>
+        </section>
+    </div>
+</body>
+</html>`
+    },
+  ],
+})
