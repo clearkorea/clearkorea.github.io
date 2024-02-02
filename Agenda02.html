@@ -1,46 +1,39 @@
-app_netlify_com__jit_plugin.deployToNetlify({
-  files: [
-    {
-      path: "index.html",
-      content: `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Council Meeting Agenda</title>
+    <title>2024년2월4일 사목협의회</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto p-4">
         <header class="text-center my-6">
-            <h1 class="text-4xl font-bold">January 2024 Church Council Meeting Agenda</h1>
+            <h1 class="text-4xl font-bold">2024년 2월 사목협의회 진행 순서</h1>
         </header>
         <section class="mb-4">
-            <h2 class="text-2xl font-semibold">Opening Prayer</h2>
-            <p>Prayer for Christian Unity</p>
+            <h2 class="text-2xl font-semibold">시작 기도(시노드를 위한 기도 Adsumus Sancte Spiritus)</h2>
+            <img src="./images/시노드기도.png" alt="시노드를 위한 기도"><br>
         </section>
         <section class="mb-4">
-            <h2 class="text-2xl font-semibold">Message from the Priest</h2>
+            <h2 class="text-2xl font-semibold">신부님 전달사항</h2>
         </section>
         <section class="mb-4">
-            <h2 class="text-2xl font-semibold">Magok Sumyeong Cathedral Café Introduction</h2>
-            <p>Promotion Committee</p>
+            <h2 class="text-2xl font-semibold">마곡수명산성당카페 Open 점검</h2>
+            <p>홍보분과</p>
         </section>
         <section class="mb-4">
-            <h2 class="text-2xl font-semibold">2023 Financial Report</h2>
-            <p>Finance Committee</p>
+            <h2 class="text-2xl font-semibold">복사단 해외캠프 2월 19일(월) ~ 22일(목)</h2>
+            <p>청소년분과</p>
         </section>
         <section class="mb-4">
-            <h2 class="text-2xl font-semibold">2024 Pastoral Plan Progress</h2>
-            <p>Secretary</p>
-        </section>
-        <section class="mb-4">
-            <h2 class="text-2xl font-semibold">Closing Prayer</h2>
-            <p>Gloria</p>
+            <h2 class="text-2xl font-semibold">마침기도</h2>
+            <p>영광송</p>
         </section>
     </div>
 </body>
-</html>`
-    },
-  ],
-})
+</html>
