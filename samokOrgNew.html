@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizational Chart</title>
-    <link rel="stylesheet" href="style.css">
+    <title>사목협의회 조직도</title>
+    <!-- Mermaid 라이브러리 포함 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        // JSON 데이터를 가져오고 파싱하는 함수
+        function fetchAndDisplayMermaid() {
+            fetch('./mermaid-history-2024-02-03-003526.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Mermaid 구문 추출 및 삽입
+                    const mermaidSyntax = data.state.code;
+                    document.getElementById('mermaidContainer').innerHTML = mermaidSyntax;
+
+                    // Mermaid 초기화 및 렌더링
+                    mermaid.initialize({startOnLoad: true});
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        }
+    </script>
 </head>
-<body>
-    <div id="orgChart"></div>
-    <script src="script.js">document.addEventListener('DOMContentLoaded', function() {
-    fetch('./mermaid-history-2024-02-03-003526.json')
-        .then(response => response.json())
-        .then(data => {
-            createOrgChart(data, document.getElementById('orgChart'));
-        });
-});
-
-function createOrgChart(node, parentElement) {
-    let div = document.createElement('div');
-    div.className = node.children ? 'department' : 'employee';
-    div.textContent = node.name;
-    parentElement.appendChild(div);
-
-    if (node.children) {
-        let childContainer = document.createElement('div');
-        childContainer.className = 'child-container';
-        parentElement.appendChild(childContainer);
-
-        node.children.forEach(child => {
-            createOrgChart(child, childContainer);
-        });
-    }
-}
-</script>
+<body onload="fetchAndDisplayMermaid()">
+    <!-- Mermaid 구문을 렌더링할 div 요소 -->
+    <div id="mermaidContainer"></div>
 </body>
 </html>
