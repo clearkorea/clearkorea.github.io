@@ -1,28 +1,13 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>사목협의회 조직도</title>
-    <!-- Mermaid 라이브러리 포함 -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        // JSON 데이터를 가져오고 파싱하는 함수
-        function fetchAndDisplayMermaid() {
-            fetch('./mermaid-history-2024-02-03-003526.json')
-                .then(response => response.json())
-                .then(data => {
-                    // Mermaid 구문 추출 및 삽입
-                    const mermaidSyntax = data.state.code;
-                    document.getElementById('mermaidContainer').innerHTML = mermaidSyntax;
-
-                    // Mermaid 초기화 및 렌더링
-                    mermaid.initialize({startOnLoad: true});
-                })
-                .catch(error => console.error('Error loading JSON:', error));
-        }
-    </script>
+  <style>
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
-<body onload="fetchAndDisplayMermaid()">
-    <!-- Mermaid 구문을 렌더링할 div 요소 -->
-    <div id="mermaidContainer"></div>
+<body>
+  <img src="./images/samokOrg.svg" alt="조직도">
 </body>
 </html>
