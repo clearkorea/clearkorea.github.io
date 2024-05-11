@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>사목협의회 엠마오 보고</title>
+<meta charset="UTF-8">
+<title>사목협의회 엠마오 보고</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             margin: 40px;
             line-height: 1.6;
         }
@@ -17,11 +21,20 @@
             margin: 20px 0;
         }
         ul {
-            list-style: none; /* Removes bullet points */
+            list-style: none; /* 기본 불릿 제거 */
             padding: 0;
         }
         li {
             margin-bottom: 10px;
+            position: relative; /* 불릿 아이콘의 위치를 조절하기 위한 설정 */
+            padding-left: 30px; /* 텍스트와 불릿 사이의 공간 */
+        }
+        li:before {
+            content: '🌟'; /* 깜찍한 불릿 아이콘 */
+            position: absolute;
+            left: 0; /* 불릿 위치 */
+            top: 0; /* 불릿 상단 조절 */
+            color: #FFD700; /* 불릿 색상 */
         }
         .highlight {
             color: green;
@@ -78,7 +91,7 @@
                 <td>자체 예산</td>
             </tr>
             <tr>
-                <td>스타벅스 스무스 아메리카노</td>
+                <td>쿠팡(스타벅스 스무스 아메리카노)</td>
                 <td>31,000</td>
                 <td>1</td>
                 <td>31,000</td>
