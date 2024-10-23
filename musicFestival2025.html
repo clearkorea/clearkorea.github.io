@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<head>
+<title>봉사자의 날</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<style>
+		body {
+    			background-color: rgba(255, 255, 255, 0.7);
+    			background-position: left;
+   			background-repeat: no-repeat;
+  			background-size: cover;
+			max-width: 100%;
+			margin: 0 auto; 
+    			font-family: 'Noto Sans KR', sans-serif;
+    			color: #333;
+		}
+
+		h1 {
+			color: magenta;  
+			text-align: left;  
+			font-weight: bold;
+			font-size: 3rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			align-items: center;			
+            		border-left: 5px solid orange;
+			margin: 30px;
+			padding: 15px 30px;
+		}
+
+		h2 {
+			text-align: left;  
+			font-weight: bold;
+			font-size: 3.5rem;  
+            font-family: 'East Sea Dokdo', sans-serif;
+			align-items: center;			
+            		margin: 30px;
+			padding: 15px 30px;
+		}
+		
+		ul {
+			font-weight: bold;
+			font-size: 3rem;  
+			text-align: left; 
+           		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			margin-top: 30px;  
+			margin-left: 30px; 			
+		}
+		
+		ul li {
+			font-weight: bold;
+			text-align: left; 
+			font-size: 3rem;  
+                        font-family: 'Noto Sans KR', sans-serif;
+			line-height: 200%;
+		}
+		
+		p {
+			color: #000;  
+			text-align: left;  
+			font-size: 3rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			margin-left: 30px; 
+			margin-top: 0px;
+		}	
+		
+		table {
+			font-size: 0.8rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			width: 100%;
+			table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
+			/* width: 400px; 표 전체의 너비를 480px로 설정 */
+			margin-top : 10px
+		}	
+
+		th {
+			color: #000;  
+			text-align: center;
+			font-weight: bold;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif
+			padding: 10px 30px;
+			/* width: 100px; 각 칸의 너비를 100px로 설정 */
+		}	
+		
+		td {
+			color: #000;  
+			text-align: center;
+			font-weight: bold;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif
+			padding: 10px 30px;
+			/* width: 100px; 각 칸의 너비를 100px로 설정 */
+		}	
+		
+		table, th, td {
+			border: 1px solid darkgray;
+		}	
+		
+		div.number {
+			color: #000;  
+			text-align: right;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif;
+			padding-right: 20px;  
+		}	
+		
+		.comment {
+			color: #000;  
+			text-align: left;
+			font-size: 0.8rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+			margin-top: 0px;
+			paddiing-top: 0px;
+			padding-left: 50px;  
+		}	
+
+		table tr.lastRaw {
+			font-weight: bold;  
+			text-align: center;
+            		font-family: 'Noto Sans KR', sans-serif;
+			border: 1px solid darkgray;
+			background-color: lightskyblue;
+		}	
+
+		table tr.firstRaw {
+			font-weight: bold;
+            font-family: 'Noto Sans KR', sans-serif;
+			border: 1px solid darkgray;
+			background-color: lightskyblue;
+		}		
+
+		img {
+			padding: 50px;	
+			width: 50%;
+		}	
+
+		ol {
+            	 	list-style-type: none;
+            		padding: 0;
+            		text-align: left;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+        	}
+
+        	li {
+        		background-color: #fff;
+           		padding: 30px;
+           		margin: 10px;
+           		border-radius: 10px;
+            		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            		display: flex;
+            		flex-direction: column;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+       		 }
+
+       		 strong {
+       			color: #cc0000;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+       		 }
+
+       		 i {
+         		color: #cc0000;
+            		margin-right: 10px;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+        }
+		
+	</style>
+</head>
+<body>
+	<h1>
+		봉사자의 날 2025
+	</h1>
+	<div>
+ 		<h2>
+			2023 덕분에 행복했습니다
+		</h2>   
+  	</div>
+        <img src="./images/%EB%B4%89%EC%82%AC%EC%9E%90%EC%9D%98%EB%82%A0.png" alt="봉사자의날"><br>
+    <h1>음악회 공연 순서</h1>
+    <ol>
+	<li>
+            <i class="fas fa-music"></i>
+            <strong>주님은 나의 목자, Then Sings My Soul: </strong>
+            <span> 박병기 그레고리오(지휘자), </span>
+            <span> 오선옥 아녜스(반주자), </span>
+            <span> 소프라노(안순복 아가다, </span>
+            <span> 김정남 베로니카, </span>
+            <span> 오은주 엘리사벳, </span>
+            <span> 노영옥 미카엘라, </span>
+            <span> 정다운 파우스티나, </span>
+            <span> 김선옥 율리아나, </span>
+            <span> 이은영 루시아), </span>
+            <span> 알토(신정복 벨라뎃다, </span>
+            <span> 김숙자 아녜스, </span>
+            <span> 박정례 아녜스, </span>
+            <span> 모승희 로사), </span>
+            <span> 테너(이은모 미카엘, </span>
+      	    <span> 황영석 크리스토폴) </span>
+	</li>
+	<li>
+            <i class="fas fa-music"></i>
+            <strong>봉사자를 위한 기도: </strong>
+            <span> 레지오(조영철 안드레아 시인), </span>
+            <span> 반주(오선옥 아녜스)</span>
+	</li>
+	<li>
+            <i class="fas fa-music"></i>
+            <strong>예수님을 기다려요(댄스): </strong>
+            <span> 교사(하종옥 소화데레사, </span>
+            <span> 장유진 프란치스카 , </span>
+            <span> 이옥형 클라라, </span>
+            <span> 이향옥 벨라뎃다) </span>
+            <span> 주일학교 초등부 저학년 </span>
+            <span> (오현아 세실리아, </span>
+            <span> 최아윤 체칠리아, </span>
+            <span> 최아린, </span>
+            <span> 정아윤 노엘라, </span>
+            <span> 이치훈 가브리엘, </span>
+            <span> 김찬빈 라파엘) </span>		
+	</li>
+	<li>
+            <i class="fas fa-music"></i>
+            <strong>세상에서 가장 귀한 이야기(카드섹션): </strong>
+            <span> 교사(하종옥 소화데레사, </span>
+            <span> 장유진 프란치스카 , </span>
+            <span> 이옥형 클라라, </span>
+            <span> 이향옥 벨라뎃다) </span>
+            <span> 주일학교 초등부 고학년 </span>
+	    <span> (최아란 실비아, </span>	   
+	    <span> 신승민 다니엘, </span>
+            <span> 최정연 마리아, </span>
+	    <span> 허하륜 헤로디온, </span>
+            <span> 허유나 엘리사벳, </span>
+	    <span> 신채현 클라라, </span>
+            <span> 정유주 세라피나, </span>
+	    <span> 손유나 플로라, </span>
+            <span> 최고운 클라우디아, </span>
+            <span> 이하영 안젤라, </span>
+	    <span> 강지수 플로렌시아, </span>
+            <span> 최승연 로사, </span>
+	    <span> 김채빈 크리스티나, </span>
+            <span> 손승민 펠릭스, </span>
+	    <span> 이도한 도미니코) </span>
+        </li>
+	<li>
+            <i class="fas fa-music"></i>
+            <strong>고향의 봄, 일어나 걸어라: </strong>
+            <span> 김순자 스텔라(지휘자) </span>
+            <span> 변미영 베로니카(반주자) </span>
+            <span> 시니어아카데미 </span>
+        </li>
+        <li>
+            <i class="fas fa-music"></i>
+            <strong>시크릿 가든(피아노 연주): </strong>
+            <span> 꾸리아(유지형 아녜스) </span>
+        </li>
+        <li>
+            <i class="fas fa-music"></i>
+            <strong>훨훨훨 - 김용림: </strong>
+            <span> 꾸리아(안영분 마르타) </span>
+        </li>
+        <li>
+            <i class="fas fa-music"></i>
+            <strong>주님이 좋아: </strong>
+            <span> 가나회(안철구 필립보, </span>
+            <span> 어해선 요셉피나, </span>
+            <span> 서명숙 카타리나, </span>
+            <span> 박설화 리디아, </span>
+            <span> 김명옥 율리아, </span>
+            <span> 고옥화 마리아막달레나, </span>
+            <span> 임경희 도미니카, </span> 
+            <span> 오미요 로사, </span>
+            <span> 원정희 데레사, </span>
+            <span> 강신숙 세실리아, </span> 
+            <span> 강숙자 세실리아, </span>
+            <span> 서순례 루시아) </span>
+        </li>
+        <li>
+            <i class="fas fa-music"></i>
+            <strong>El Bimbo - Paul Mauriat: </strong>
+            <span> 기타반(이창진 아뽈레오, </span>
+            <span> 김한신 가브리엘, </span>
+            <span> 오은주 엘리사벳, </span>
+            <span> 양은경 카타리나, </span>
+            <span> 연수용 안젤라, </span>
+            <span> 조영희 아셀라, </span>
+            <span> 이은영 루시아, </span>
+            <span> 김수현 글라라, </span>
+            <span> 노병권 프란치스코) </span>
+        </li>
+        <!-- 필요한 만큼 곡과 아티스트를 추가할 수 있습니다. -->
+    </ol>
+<img src="./images/%EC%95%84%EA%B8%B0%EC%98%88%EC%88%98%EB%8B%98.jpg" alt="구유경배"><br>
+</body>
+</html>
