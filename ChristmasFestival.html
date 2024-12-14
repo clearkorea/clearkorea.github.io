@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+<title>봉사자의 날</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<style>
+		body {
+    			background-color: rgba(255, 255, 255, 0.7);
+    			background-position: left;
+   			background-repeat: no-repeat;
+  			background-size: cover;
+			max-width: 100%;
+			margin: 0 auto; 
+    			font-family: 'Noto Sans KR', sans-serif;
+    			color: #333;
+		}
+
+		h1 {
+			color: magenta;  
+			text-align: left;  
+			font-weight: bold;
+			font-size: 3rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			align-items: center;			
+            		border-left: 5px solid orange;
+			margin: 30px;
+			padding: 15px 30px;
+		}
+
+		h2 {
+			text-align: left;  
+			font-weight: bold;
+			font-size: 3.5rem;  
+            font-family: 'East Sea Dokdo', sans-serif;
+			align-items: center;			
+            		margin: 30px;
+			padding: 15px 30px;
+		}
+		
+		ul {
+			font-weight: bold;
+			font-size: 3rem;  
+			text-align: left; 
+           		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			margin-top: 30px;  
+			margin-left: 30px; 			
+		}
+		
+		ul li {
+			font-weight: bold;
+			text-align: left; 
+			font-size: 3rem;  
+                        font-family: 'Noto Sans KR', sans-serif;
+			line-height: 200%;
+		}
+		
+		p {
+			color: #000;  
+			text-align: left;  
+			font-size: 3rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			margin-left: 30px; 
+			margin-top: 0px;
+		}	
+		
+		table {
+			font-size: 0.8rem;  
+            		font-family: 'Noto Sans KR', sans-serif;
+			line-height: 180%;
+			width: 100%;
+			table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
+			/* width: 400px; 표 전체의 너비를 480px로 설정 */
+			margin-top : 10px
+		}	
+
+		th {
+			color: #000;  
+			text-align: center;
+			font-weight: bold;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif
+			padding: 10px 30px;
+			/* width: 100px; 각 칸의 너비를 100px로 설정 */
+		}	
+		
+		td {
+			color: #000;  
+			text-align: center;
+			font-weight: bold;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif
+			padding: 10px 30px;
+			/* width: 100px; 각 칸의 너비를 100px로 설정 */
+		}	
+		
+		table, th, td {
+			border: 1px solid darkgray;
+		}	
+		
+		div.number {
+			color: #000;  
+			text-align: right;
+			font-size: 0.8rem;  
+            font-family: 'Noto Sans KR', sans-serif;
+			padding-right: 20px;  
+		}	
+		
+		.comment {
+			color: #000;  
+			text-align: left;
+			font-size: 0.8rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+			margin-top: 0px;
+			paddiing-top: 0px;
+			padding-left: 50px;  
+		}	
+
+		table tr.lastRaw {
+			font-weight: bold;  
+			text-align: center;
+            		font-family: 'Noto Sans KR', sans-serif;
+			border: 1px solid darkgray;
+			background-color: lightskyblue;
+		}	
+
+		table tr.firstRaw {
+			font-weight: bold;
+            font-family: 'Noto Sans KR', sans-serif;
+			border: 1px solid darkgray;
+			background-color: lightskyblue;
+		}		
+
+		img {
+			padding: 50px;	
+			width: 50%;
+		}	
+
+		ol {
+            	 	list-style-type: none;
+            		padding: 0;
+            		text-align: left;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+        	}
+
+        	li {
+        		background-color: #fff;
+           		padding: 30px;
+           		margin: 10px;
+           		border-radius: 10px;
+            		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            		display: flex;
+            		flex-direction: column;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+       		 }
+
+       		 strong {
+       			color: #cc0000;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+       		 }
+
+       		 i {
+         		color: #cc0000;
+            		margin-right: 10px;
+			font-size: 3rem;  
+           		font-family: 'Noto Sans KR', sans-serif;
+        }
+		
+	</style>
+</head>
+<body>
+	<h1>
+		크리스마스 성가 잔치
+	</h1>
+	<div>
+ 		<h2>
+			기쁨이 가득한 크리스마스 성가 잔치에 여러분을 초대합니다!
+		</h2>   
+  	</div>
+        <img src="./images/%EB%B4%89%EC%82%AC%EC%9E%90%EC%9D%98%EB%82%A0.png" alt="크리스마스 성가 잔치"><br>
+    <h1>크리스마스 성가 잔치 공연 순서</h1>
+    <ol>
+<ul>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>주의 자비가 내려와</strong>
+        <span>오프닝 축하공연 - 주일학교 율동</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>107번 천사의 찬송, 아파트</strong>
+        <span>1번째 - 4구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>111번 하늘 높은 곳에 영광, 나를 사랑하시는 예수님</strong>
+        <span>2번째 - 3구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>102번 어서 가 경배하세, Merry Christmas</strong>
+        <span>3번째 - 9구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>112번 구유에 누워계시니, 내 나이가 어때서</strong>
+        <span>4번째 - 7구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>사랑의 인사, We Wish You a Merry Christmas</strong>
+        <span>축하공연 - 주일학교 합주</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>107번 천사의 찬송, 예수님 어서 오세요</strong>
+        <span>5번째 - 2구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>99번 고요한 밤 거룩한 밤, 크리스마스 폴카</strong>
+        <span>6번째 - 8구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>99번 고요한 밤 거룩한 밤, Stand By Me Line Dance</strong>
+        <span>7번째 - 6구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>103번 오늘 아기 예수, 소양강처녀</strong>
+        <span>8번째 - 5구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>101번 글로리아 높은신 이의 탄생, 루돌프사슴코 (노래 & 율동)</strong>
+        <span>9번째 - 1구역</span>
+    </li>
+    <li>
+        <i class="fas fa-music"></i>
+        <strong>크리스마스에는 축복을, 고요한 밤 거룩한 밤, 징글벨</strong>
+        <span>축하공연 - 주일학교 합주</span>
+    </li>
+</ul>
+    </ol>
+<img src="./images/%EC%95%84%EA%B8%B0%EC%98%88%EC%88%98%EB%8B%98.jpg" alt="구유경배"><br>
+</body>
+</html>
