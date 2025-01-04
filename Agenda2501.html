@@ -121,11 +121,13 @@
 			border: 1px solid darkgray;
 			background-color: lightskyblue;
 		}		
-
-		img {
-			padding: 50px;			
-		}			
-	</style>
+        
+	img {
+	    padding: 50px;	
+            max-width: 100%;   /* 부모 요소 너비를 넘지 않음 */
+            height: auto;     /* 비율을 유지하면서 높이 자동 조정 */
+        }
+</style>
 </head>
 <body>
 	<h2>
