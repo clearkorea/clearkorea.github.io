@@ -1,0 +1,72 @@
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Table, TableHead, TableRow, TableCell, TableBody } from "@/components/ui/table";
+
+export default function MeetingRoomManager() {
+  const [rooms, setRooms] = useState([
+    { id: 1, name: "회의실 A", status: "예약 가능" },
+    { id: 2, name: "회의실 B", status: "예약 가능" },
+  ]);
+  const [newRoom, setNewRoom] = useState("");
+
+  const addRoom = () => {
+    if (!newRoom.trim()) return;
+    setRooms([...rooms, { id: Date.now(), name: newRoom, status: "예약 가능" }]);
+    setNewRoom("");
+  };
+
+  const toggleStatus = (id) => {
+    setRooms(
+      rooms.map((room) =>
+        room.id === id
+          ? {
+              ...room,
+              status: room.status === "예약 가능" ? "사용 중" : "예약 가능",
+            }
+          : room
+      )
+    );
+  };
+
+  return (
+    <div className="p-6 space-y-6">
+      <h1 className="text-2xl font-bold">회의실 관리</h1>
+      <div className="flex gap-2">
+        <Input
+          placeholder="새 회의실 이름"
+          value={newRoom}
+          onChange={(e) => setNewRoom(e.target.value)}
+        />
+        <Button onClick={addRoom}>추가</Button>
+      </div>
+      <Card>
+        <CardContent>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>이름</TableCell>
+                <TableCell>상태</TableCell>
+                <TableCell>작업</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rooms.map((room) => (
+                <TableRow key={room.id}>
+                  <TableCell>{room.name}</TableCell>
+                  <TableCell>{room.status}</TableCell>
+                  <TableCell>
+                    <Button onClick={() => toggleStatus(room.id)}>
+                      상태 변경
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
