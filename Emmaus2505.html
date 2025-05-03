@@ -57,6 +57,32 @@
     tr.firstRaw {
       background-color: lightskyblue;
     }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px 0;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: auto;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #f7f7f7;
+      border-left: 4px solid #ff9900;
+    } 
+    
   </style>
 </head>
 <body>
@@ -112,5 +138,26 @@
     </tbody>
   </table>
 
+  <h2>📸 방문 장소별 사진</h2>
+
+  <details>
+    <summary>프랑스가든펜션</summary>
+    <div class="gallery">
+      <img src="./0_1.jpg" alt="펜션1">
+      <img src="./0_2.jpg" alt="펜션2">
+      <img src="./0_3.jpg" alt="펜션3">
+      <img src="./0_4.jpg" alt="펜션4">
+      <img src="./0_5.jpg" alt="펜션5">
+      <img src="./0_6.jpg" alt="펜션6">
+      <img src="./0_7.jpg" alt="펜션7">
+      <img src="./0_8.jpg" alt="펜션8">
+      <img src="./0_9.jpg" alt="펜션9">
+      <img src="./0_10.jpg" alt="펜션10">
+      <img src="./0_11.jpg" alt="펜션11">
+      <img src="./0_12.jpg" alt="펜션12">
+      플8">
+    </div>
+  </details>
+  
 </body>
 </html>
