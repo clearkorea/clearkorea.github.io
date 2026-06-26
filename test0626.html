@@ -3,76 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026년 0월 사목협의회</title>
+  <title>마곡수명산성당 공지</title>
+
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #f7f3ed;
+      background: #f6f1ea;
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
         "Noto Sans KR", "Malgun Gothic", sans-serif;
       color: #3f3a35;
       line-height: 1.7;
     }
+
     .wrap {
       max-width: 420px;
       margin: 0 auto;
-      padding: 22px 16px 32px;
+      padding: 22px 16px 36px;
     }
-    .header {
+
+    .header,
+    .card {
       background: #ffffff;
-      border-radius: 22px;
-      padding: 26px 22px;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(80, 60, 40, 0.07);
+    }
+
+    .header {
       text-align: center;
-      box-shadow: 0 4px 14px rgba(80, 60, 40, 0.08);
+      padding: 28px 20px;
       margin-bottom: 16px;
     }
-    .header .label {
+
+    .diocese {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f3e8d8;
+      color: #8b6a43;
+      border-radius: 999px;
       font-size: 13px;
-      color: #9b7b55;
-      letter-spacing: 0.08em;
-      margin-bottom: 6px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
     }
+
     h1 {
       margin: 0;
       font-size: 25px;
-      font-weight: 800;
       color: #4a3728;
+      line-height: 1.35;
     }
+
     .subtitle {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 15px;
-      color: #7a6a5b;
+      color: #7c6d60;
     }
+
     .card {
-      background: #ffffff;
-      border-radius: 18px;
       padding: 20px 18px;
       margin-bottom: 14px;
-      box-shadow: 0 3px 12px rgba(80, 60, 40, 0.06);
     }
+
     .card-title {
       font-size: 18px;
-      font-weight: 750;
-      margin-bottom: 14px;
+      font-weight: 800;
       color: #4a3728;
       border-left: 4px solid #c9a66b;
       padding-left: 10px;
+      margin-bottom: 14px;
     }
+
     .info-row {
-      margin-bottom: 10px;
       font-size: 15.5px;
+      margin-bottom: 9px;
     }
+
     .info-row strong {
       display: inline-block;
-      min-width: 58px;
+      min-width: 62px;
       color: #6d5338;
     }
+
+    .notice-text {
+      font-size: 15.5px;
+      white-space: pre-line;
+    }
+
     .order-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
+
     .order-list li {
       display: flex;
       gap: 10px;
@@ -80,9 +102,11 @@
       border-bottom: 1px solid #eee6dc;
       font-size: 15.5px;
     }
+
     .order-list li:last-child {
       border-bottom: none;
     }
+
     .num {
       width: 26px;
       height: 26px;
@@ -95,6 +119,87 @@
       text-align: center;
       line-height: 26px;
     }
+
+    .sub-text {
+      display: block;
+      margin-top: 2px;
+      font-size: 13.5px;
+      color: #8a7b6e;
+    }
+
+    .memo {
+      background: #fbf7ef;
+      border: 1px solid #eadcc8;
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 12px;
+      font-size: 15.5px;
+    }
+
+    details {
+      margin: 0;
+    }
+
+    summary {
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .accordion-title {
+      cursor: pointer;
+      background: #8b6a43;
+      color: #ffffff;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 15.5px;
+      font-weight: 800;
+    }
+
+    .accordion-title::after {
+      content: "▼";
+      float: right;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    details[open] .accordion-title::after {
+      content: "▲";
+    }
+
+    .prayer-note {
+      background: #ffffff;
+      border: 1px solid #eadcc8;
+      border-left: 5px solid #c9a66b;
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .prayer-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #5b4028;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .prayer-source {
+      font-size: 13.5px;
+      color: #8a7b6e;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .prayer-text {
+      white-space: pre-line;
+      font-size: 15.5px;
+      line-height: 1.9;
+      color: #4b443d;
+    }
+
     .button {
       display: block;
       text-decoration: none;
@@ -107,85 +212,141 @@
       font-weight: 700;
       margin-top: 10px;
     }
+
     .button.light {
       background: #efe4d5;
       color: #5a4028;
     }
+
+    .button.outline {
+      background: #ffffff;
+      color: #6d5338;
+      border: 1px solid #d9c4a8;
+    }
+
     .note {
       font-size: 14px;
       color: #8a7b6e;
-      margin-top: 8px;
+      margin-top: 10px;
       text-align: center;
     }
+
     .footer {
       text-align: center;
       font-size: 14px;
       color: #8a7b6e;
       margin-top: 22px;
-      padding-bottom: 10px;
     }
+
     .footer strong {
       color: #6d5338;
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
+    <!-- 상단 제목 영역 -->
     <section class="header">
-      <div class="label">천주교 서울대교구</div>
-      <h1>2026년 0월 사목협의회</h1>
+      <div class="diocese">천주교 서울대교구</div>
+      <h1>2026년 7월 사목협의회</h1>
       <div class="subtitle">마곡수명산성당 사목협의회 안내</div>
     </section>
+
+    <!-- 기본 안내 -->
     <section class="card">
-      <div class="card-title">회의 안내</div>
-      <div class="info-row">
-        <strong>일시</strong>
-        2026년 0월 00일(주일) 교중 미사 후
-      </div>
-      <div class="info-row">
-        <strong>장소</strong>
-        마곡수명산성당 회의실
-      </div>
-      <div class="info-row">
-        <strong>참석자</strong>
-        사목협의회 사목위원 일동
+      <div class="card-title">안내</div>
+      <div class="info-row"><strong>일시</strong>2026년 6월 28일(주일) 교중 미사 후</div>
+      <div class="info-row"><strong>장소</strong>마곡수명산성당 회의실</div>
+      <div class="info-row"><strong>대상</strong>사목협의회 사목위원 일동</div>
+    </section>
+
+    <!-- 공지 본문 -->
+    <section class="card">
+      <div class="card-title">공지 내용</div>
+      <div class="notice-text">
+찬미예수님.
+
+2026년 7월 사목협의회 안내드립니다.
+사목위원님들께서는 6월 28일 교중 미사 후 회의실로 모여주시기 바랍니다.
       </div>
     </section>
+
+    <!-- 진행 순서 -->
     <section class="card">
       <div class="card-title">진행 순서</div>
+
       <ol class="order-list">
         <li>
           <span class="num">1</span>
-          <span>시작기도</span>
+          <span>
+            시작기도
+            <span class="sub-text">예수 성심께 천하 만민을 바치는 기도</span>
+          </span>
         </li>
-        <li>
-          <span class="num">2</span>
-          <span>분과별 주요 진행사항 공유</span>
-        </li>
-        <li>
-          <span class="num">3</span>
-          <span>신부님 전달사항</span>
-        </li>
-        <li>
-          <span class="num">4</span>
-          <span>마침기도 · 영광송</span>
-        </li>
+        <li><span class="num">2</span><span>분과별 주요 진행사항 공유</span></li>
+        <li><span class="num">3</span><span>신부님 전달사항</span></li>
+        <li><span class="num">4</span><span>마침기도 · 영광송</span></li>
       </ol>
+
+      <!-- 시작기도 아코디언 -->
+      <div class="memo">
+        <details>
+          <summary class="accordion-title">
+            🙏 시작기도 펼쳐보기
+          </summary>
+
+          <div class="prayer-note">
+            <div class="prayer-title">
+              예수 성심께 천하 만민을 바치는 기도
+            </div>
+
+            <div class="prayer-source">
+              출처: 한국천주교주교회의 매일미사 · 예수 성심 성월
+            </div>
+
+            <div class="prayer-text">
+아래 영역에 한국천주교주교회의 매일미사에 게시된
+공식 기도문 전문을 붙여 넣어 사용하십시오.
+
+※ 저작권 보호를 위해 이 템플릿에는 공식 전문을 자동 복제하지 않고,
+공식 출처 확인 버튼을 함께 제공합니다.
+            </div>
+
+            <a href="https://missa.cbck.or.kr/Prayer/27" class="button outline" target="_blank" rel="noopener">
+              공식 기도문 원문 확인하기
+            </a>
+          </div>
+        </details>
+      </div>
+
       <a href="#" class="button">분과별 주요 진행사항 PDF 보기</a>
     </section>
+
+    <!-- 링크 영역 -->
     <section class="card">
       <div class="card-title">전례력 안내</div>
       <a href="#" class="button light">이번 달 전례력 이미지 보기</a>
       <a href="#" class="button light">다음 달 전례력 이미지 보기</a>
       <a href="#" class="button light">다음 다음 달 전례력 이미지 보기</a>
-      <div class="note">
-        전례력 이미지는 링크 연결 후 확인하실 수 있습니다.
-      </div>
+      <div class="note">각 버튼을 누르면 전례력 이미지를 확인하실 수 있습니다.</div>
     </section>
+
+    <!-- 기타 자료 링크 -->
+    <section class="card">
+      <div class="card-title">관련 자료</div>
+      <a href="#" class="button light">회의 자료 보기</a>
+      <a href="#" class="button light">행사 안내 이미지 보기</a>
+    </section>
+
+    <!-- 하단 -->
     <div class="footer">
       <strong>마곡수명산성당 사목협의회</strong><br />
-      함께 기도하며 본당 공동체를 위해 봉사하겠습니다.
+      함께 기도하며 본당 공동체를 섬기겠습니다.
     </div>
+
   </div>
 </body>
 </html>
+
