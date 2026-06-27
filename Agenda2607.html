@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마곡수명산성당 공지</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #e6f7fb 0%, #f2fbff 45%, #e9f6f2 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", "Malgun Gothic", sans-serif;
+      color: #17333f;
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 22px 16px 36px;
+    }
+
+    .header,
+    .card {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0, 105, 140, 0.12);
+    }
+
+    .header {
+      text-align: center;
+      padding: 28px 20px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(91, 192, 222, 0.24);
+    }
+
+    .diocese {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #d8f3f8;
+      color: #007a94;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 25px;
+      color: #064f63;
+      line-height: 1.35;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #4f7f8f;
+    }
+
+    .card {
+      padding: 20px 18px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(139, 217, 232, 0.28);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #064f63;
+      border-left: 4px solid #20b8d8;
+      padding-left: 10px;
+      margin-bottom: 14px;
+    }
+
+    .info-row {
+      font-size: 15.5px;
+      margin-bottom: 9px;
+    }
+
+    .info-row strong {
+      display: inline-block;
+      min-width: 62px;
+      color: #007a94;
+    }
+
+    .notice-text {
+      font-size: 15.5px;
+      white-space: pre-line;
+    }
+
+    .order-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .order-list li {
+      display: flex;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid #d8edf2;
+      font-size: 15.5px;
+    }
+
+    .order-list li:last-child {
+      border-bottom: none;
+    }
+
+    .num {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border-radius: 50%;
+      background: #c8f0f7;
+      color: #006c82;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 26px;
+    }
+
+    .sub-text {
+      display: block;
+      margin-top: 2px;
+      font-size: 13.5px;
+      color: #5f8994;
+    }
+
+    .memo {
+      background: #eefbfe;
+      border: 1px solid #b9e9f2;
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 12px;
+      font-size: 15.5px;
+    }
+
+    details {
+      margin: 0;
+    }
+
+    summary {
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .accordion-title {
+      cursor: pointer;
+      background: linear-gradient(135deg, #0088a8 0%, #00a9c8 55%, #22c7d8 100%);
+      color: #ffffff;
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 15.5px;
+      font-weight: 800;
+    }
+
+    .accordion-title::after {
+      content: "▼";
+      float: right;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    details[open] .accordion-title::after {
+      content: "▲";
+    }
+
+    .prayer-note {
+      background: #ffffff;
+      border: 1px solid #b9e9f2;
+      border-left: 5px solid #20b8d8;
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .prayer-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #06566b;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .prayer-source {
+      font-size: 13.5px;
+      color: #5f8994;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .prayer-text {
+      white-space: pre-line;
+      font-size: 15.5px;
+      line-height: 1.9;
+      color: #203f48;
+    }
+
+    .button {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: linear-gradient(135deg, #0088a8 0%, #00a9c8 60%, #22c7d8 100%);
+      color: #ffffff;
+      padding: 13px 14px;
+      border-radius: 14px;
+      font-size: 15.5px;
+      font-weight: 700;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 136, 168, 0.18);
+    }
+
+    .button.light {
+      background: #d8f3f8;
+      color: #006c82;
+      box-shadow: none;
+    }
+
+    .button.outline {
+      background: #ffffff;
+      color: #007a94;
+      border: 1px solid #8bd9e8;
+      box-shadow: none;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #5f8994;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #5f8994;
+      margin-top: 22px;
+    }
+
+    .footer strong {
+      color: #007a94;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- 상단 제목 영역 -->
+    <section class="header">
+      <div class="diocese">천주교 서울대교구</div>
+      <h1>2026년 7월 사목협의회</h1>
+      <div class="subtitle">마곡수명산성당 사목협의회 안내</div>
+    </section>
+
+    <!-- 기본 안내 -->
+    <section class="card">
+      <div class="card-title">안내</div>
+      <div class="info-row"><strong>일시</strong>2026년 6월 28일(주일) 교중 미사 후</div>
+      <div class="info-row"><strong>장소</strong>마곡수명산성당 베드로바오로방</div>
+      <div class="info-row"><strong>대상</strong>주임신부님, 사목위원님, 사무장님, 마리아지트분과장님, 자문위원장님 부부</div>
+    </section>
+
+    <!-- 진행 순서 -->
+    <section class="card">
+      <div class="card-title">진행 순서</div>
+
+      <ol class="order-list">
+        <li>
+          <span class="num">1</span>
+          <span>
+            시작기도
+            <span class="sub-text">예수 성심께 천하 만민을 바치는 기도</span>
+          </span>
+        </li>
+        <li><span class="num">2</span><span>분과별 주요 진행사항 공유</span></li>
+        <li><span class="num">3</span><span>신부님 전달사항</span></li>
+        <li><span class="num">4</span><span>마침기도 · 영광송</span></li>
+      </ol>
+
+      <!-- 시작기도 아코디언 -->
+      <div class="memo">
+        <details>
+          <summary class="accordion-title">
+            🙏 시작기도 펼쳐보기
+          </summary>
+
+          <div class="prayer-note">
+            <div class="prayer-title">
+              예수 성심께 천하 만민을 바치는 기도
+            </div>
+
+            <div class="prayer-source">
+              출처: 가톨릭 기도문 · 예수 성심 성월
+            </div>
+
+            <div class="prayer-text">
+예수 성심 성월
+예수 성심께 천하 만민을 바치는 기도
+
+○
+지극히 어지신 구세주 예수님,
+주님 앞에 꿇어 경배하오니
+저희를 굽어살피소서.
+
+●
+저희는 이미 주님의 백성이오니
+언제나 주님과 함께 살아가기를 바라나이다.
+주님과 하나 되고자
+오늘 저희를 주님의 성심께 봉헌하나이다.
+
+○
+주님을 일찍이 알아 모시지 못한 사람도 많고
+주님을 알고도 주님의 계명을 저버리고
+주님을 떠난 사람도 많사오니
+
+●
+지극히 인자하신 예수님,
+이런 사람들도 다 불쌍히 여기시어
+주님의 성심께 이끌어 들이소서.
+
+○
+주님께서는 목자이시니
+주님을 떠나지 않은 사람들을 보살피시고
+이미 주님을 떠난 사람들은
+다시 아버지 집으로 돌아오게 하시어
+굶어 죽는 일이 없게 하소서.
+
+●
+옹졸한 고집에 사로잡힌 사람들이나
+불목하여 갈린 사람들도 부르시어
+저희가 모두 같은 신앙을 고백하며
+한 우리에서 한 목자 밑에 살게 하소서.
+
+○
+주님, 거룩한 교회를 평화의 깃발로 세우시고
+모든 나라에 참된 평화를 주시어
+온 세상 어디서나 입을 모아
+저희를 구원하신 거룩하신 성심께
+영원히 찬미와 영광과 흠숭을 드리게 하소서.
+
+◎
+아멘.
+
+○
+예수 성심,
+
+●
+이 세상에 주님의 나라를 세우소서.
+            </div>
+
+            <a href="https://prayer.catholic.or.kr/html/prayb013.htm" class="button outline" target="_blank" rel="noopener">
+              공식 기도문 원문 확인하기
+            </a>
+          </div>
+        </details>
+      </div>
+
+      <a href="./images/2026년 7월 사목협의회.pdf" class="button">분과별 주요 진행사항 PDF 보기</a>
+    </section>
+
+    <!-- 링크 영역 -->
+    <section class="card">
+      <div class="card-title">전례력 안내</div>
+      <a href="./images/202606_1.png" class="button light">이번 달 전례력 이미지 보기</a>
+      <a href="./images/202607_1.png" class="button light">다음 달 전례력 이미지 보기</a>
+      <a href="./images/202608_1.png" class="button light">다음 다음 달 전례력 이미지 보기</a>
+      <div class="note">각 버튼을 누르면 전례력 이미지를 확인하실 수 있습니다.</div>
+    </section>
+
+    <!-- 기타 자료 링크 
+    <section class="card">
+      <div class="card-title">관련 자료</div>
+      <a href="#" class="button light">회의 자료 보기</a>
+      <a href="#" class="button light">행사 안내 이미지 보기</a>
+    </section>
+    -->
+
+    <!-- 하단 -->
+    <div class="footer">
+      <strong>마곡수명산성당 사목협의회</strong><br />
+      함께 기도하며 본당 공동체를 위해 봉사하겠습니다.
+    </div>
+
+  </div>
+</body>
+</html>
